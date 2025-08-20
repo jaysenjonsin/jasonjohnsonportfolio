@@ -50,7 +50,9 @@ export const ProjectCarousel = ({ project }: ProjectCarouselProps) => {
           <img
             src={images[currentIndex] || ''}
             alt={`${project.title} screenshot ${currentIndex + 1}`}
-            className='w-full h-80 object-cover'
+            className={`w-full h-80 ${
+              project.id === 'Knoted' ? 'object-contain' : 'object-cover'
+            }`}
             style={{
               objectPosition:
                 images[currentIndex] === '/projects/glassdoor/cRegFlow.gif'

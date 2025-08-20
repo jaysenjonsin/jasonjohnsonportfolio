@@ -11,8 +11,8 @@ export default function WorkPage() {
             .filter((project) => project.category === 'work')
             .map((project) => (
               <section key={project.id}>
-                <h2 className='font-mono text-sm mb-2'>{project.title}</h2>
-                <p className='font-mono text-sm leading-relaxed max-w-lg mb-4'>
+                <h2 className='font-mono text-md mb-2'>{project.title}</h2>
+                <p className='font-mono text-sm leading-relaxed max-w-lg mb-2'>
                   {project.description}
                 </p>
                 <Link
@@ -31,8 +31,8 @@ export default function WorkPage() {
               .filter((project) => project.category === 'project')
               .map((project) => (
                 <section key={project.id}>
-                  <h2 className='font-mono text-sm mb-2'>{project.title}</h2>
-                  <p className='font-mono text-sm leading-relaxed max-w-lg mb-4'>
+                  <h2 className='font-mono text-md mb-2'>{project.title}</h2>
+                  <p className='font-mono text-sm leading-relaxed max-w-lg mb-2'>
                     {project.description}
                   </p>
                   <Link

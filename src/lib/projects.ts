@@ -19,7 +19,7 @@ export const projects: Project[] = [
     title: 'Glassdoor',
     description: 'growing user engagement and content contribution @ Glassdoor',
     longDescription:
-      'Glassdoor is a platform for workplace transparency, helping employees and job seekers research companies, read reviews, and make informed career decisions. As a Front-end Software Engineer Intern at Glassdoor, I built features and infrastructure that boosted content contribution, enhanced the user experience, and streamlined developer workflows. I built the “add company” feature within the company review survey using advanced React reducer patterns, GraphQL queries/mutations, and dynamic form validation, boosting employer review survey submissions by 6%. I refactored legacy autocomplete components to meet WCAG accessibility standards and maintain UX consistency across multiple survey workflows. I also architected A/B test infrastructure with Amplitude that drove a 102% increase in survey submissions, and improved test coverage across all salary survey modules by 94% using TypeScript, Jest, and React Testing Library. Additionally, I enhanced developer experience by creating Storybook documentation with GraphQL API mocking and i18n context integration, streamlining onboarding and cross-team collaboration.',
+      'Glassdoor is a platform for workplace transparency, helping employees and job seekers research companies, read reviews, and make informed career decisions. As a Front-end Software Engineer Intern at Glassdoor, I built features and infrastructure that boosted content contribution, enhanced the user experience, and streamlined developer workflows. I built the “Add New Company” feature within the company review survey using advanced React reducer patterns, GraphQL queries/mutations, and dynamic form validation, boosting employer review survey submissions by 6%. I refactored legacy autocomplete components to meet WCAG accessibility standards and maintain UX consistency across multiple survey workflows. I also architected A/B test infrastructure with Amplitude that drove a 102% increase in survey submissions, and improved test coverage across all salary survey modules by 94% using TypeScript, Jest, and React Testing Library. Additionally, I enhanced the developer experience by creating Storybook documentation with GraphQL API mocking and i18n context integration, streamlining onboarding and cross-team collaboration.',
     technologies: [
       'React',
       'Typescript',
@@ -32,7 +32,7 @@ export const projects: Project[] = [
       'Amplitude',
       'Storybook',
     ],
-    year: '2021',
+    year: '2025',
     category: 'work',
     liveUrl: 'https://www.glassdoor.com/surveys/start',
     images: [
@@ -56,14 +56,13 @@ export const projects: Project[] = [
       'Ruby on Rails',
       'PostgreSQL',
       'Stripe',
-      'CI/CD',
       'GitHub Actions',
       'MUI',
       'React Router',
       'Context API',
       'JWT',
     ],
-    year: '2022',
+    year: '2023-2024',
     category: 'work',
     onHomepage: true,
   },
@@ -72,11 +71,17 @@ export const projects: Project[] = [
     title: 'Knoted',
     description: 'making learning more efficient @ Knoted',
     longDescription:
-      'Knoted doesn’t just help you learn — it helps you learn how to learn. Personalized flashcards, spaced repetition, audio reviews, and more in one hub. Currently in production.',
+      "Knoted doesn't just help you learn — it helps you learn how to learn. Personalized flashcards/notes, spaced repetition algorithms, audio reviews, and more in one hub. Currently in production.",
     technologies: ['Technology 5', 'Technology 6'],
-    year: '2023',
+    year: '2025',
     category: 'work',
     onHomepage: true,
+    images: [
+      '/projects/knoted/knotedNotesView.png',
+      '/projects/knoted/knotedLiveAudio.png',
+      '/projects/knoted/knotedDashboard.png',
+      '/projects/knoted/knotedUpload.png',
+    ],
   },
   {
     id: 'Scribe',
@@ -96,7 +101,7 @@ export const projects: Project[] = [
       'Prisma',
       'Husky',
     ],
-    year: '2024',
+    year: '2022-2023',
     category: 'work',
     githubUrl: 'https://github.com/oslabs-beta/Scribe-for-GraphQL',
     articleUrl:
@@ -105,6 +110,26 @@ export const projects: Project[] = [
       '/projects/scribe/scribeHomepage.png',
       '/projects/scribe/scribeGenerateTest.gif',
       '/projects/scribe/scribeSignUp.png',
+    ],
+  },
+  {
+    id: 'Amelia',
+    title: 'Amelia',
+    description: 'Taking flight w/ Amelia - 1st Place Hackathon Winner',
+    longDescription:
+      'Amelia is an aviation-themed game that challenges players to navigate to the other side of the map by choosing the right plane according to the weather conditions. I developed Amelia from inception to completion within 72 hours, utilizing React and Node.js. I implemented back-end API calls to access real-time weather-related data using Storm Glass API to enhance gameplay with dynamic weather conditions. My team was awarded 1st place overall among 100+ individual participants at the Aviation Hack 2023 hackathon.',
+    technologies: ['React', 'Node.js', 'Storm Glass API'],
+    year: '2023',
+    category: 'project',
+    onHomepage: true,
+    images: [
+      '/projects/amelia/ameliaLoadingScreen.mp4',
+      '/projects/amelia/ameliaChoosePlane.webp',
+      '/projects/amelia/ameliaWin.mp4',
+      '/projects/amelia/ameliaLose1.mp4',
+      '/projects/amelia/ameliaLose2.mp4',
+      '/projects/amelia/ameliaLose3.mp4',
+      '/projects/amelia/ameliaResultScreens.avif',
     ],
   },
   {
@@ -142,26 +167,6 @@ export const projects: Project[] = [
     ],
     year: '2022-2023',
     category: 'project',
-  },
-  {
-    id: 'Amelia',
-    title: 'Amelia',
-    description: 'Aviation Inspired Game - 1st Place Winner',
-    longDescription:
-      'Amelia is an aviation-themed game that challenges players to navigate to the other side of the map by choosing the right plane according to the weather conditions. I developed Amelia from inception to completion within 72 hours, utilizing React and Node.js. I implemented back-end API calls to access real-time weather-related data using Storm Glass API to enhance gameplay with dynamic weather conditions. My team was awarded 1st place overall among 100+ individual participants at the Aviation Hack 2023 hackathon.',
-    technologies: ['React', 'Node.js', 'Storm Glass API'],
-    year: '2023',
-    category: 'project',
-    onHomepage: true,
-    images: [
-      '/projects/amelia/ameliaLoadingScreen.mp4',
-      '/projects/amelia/ameliaChoosePlane.webp',
-      '/projects/amelia/ameliaWin.mp4',
-      '/projects/amelia/ameliaLose1.mp4',
-      '/projects/amelia/ameliaLose2.mp4',
-      '/projects/amelia/ameliaLose3.mp4',
-      '/projects/amelia/ameliaResultScreens.avif',
-    ],
   },
 ];
 
