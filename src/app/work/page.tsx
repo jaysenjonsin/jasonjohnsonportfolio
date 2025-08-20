@@ -5,7 +5,7 @@ export default function WorkPage() {
   return (
     <>
       <main className='flex-1 py-16'>
-        <h1 className='text-3xl font-mono mb-8'>work</h1>
+        <h1 className='text-3xl font-mono mb-8'>work & projects</h1>
         <div className='space-y-8'>
           {projects
             .filter((project) => project.category === 'work')
@@ -24,8 +24,7 @@ export default function WorkPage() {
               </section>
             ))}
         </div>
-        <section className='mt-16'>
-          <h2 className='text-3xl font-mono mb-8'>projects</h2>
+        <section className='mt-8'>
           <div className='space-y-8'>
             {projects
               .filter((project) => project.category === 'project')

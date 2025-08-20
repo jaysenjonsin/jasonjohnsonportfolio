@@ -74,7 +74,7 @@ export const projects: Project[] = [
       "Knoted doesn't just help you learn — it helps you learn how to learn. Personalized flashcards/notes, spaced repetition algorithms, audio reviews, and more in one hub. Currently in production.",
     technologies: ['Technology 5', 'Technology 6'],
     year: '2025',
-    category: 'work',
+    category: 'project',
     onHomepage: true,
     images: [
       '/projects/knoted/knotedNotesView.png',
