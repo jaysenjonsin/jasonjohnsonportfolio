@@ -157,6 +157,7 @@ export const projects: Project[] = [
       '/projects/ignition/ignitionMedRequestFilled.png',
     ],
     category: 'project',
+    githubUrl: 'https://github.com/jaysenjonsin/Ignition',
   },
   // {
   //   id: 'Tasket',
@@ -182,17 +183,25 @@ export const projects: Project[] = [
     title: 'EventFinder',
     description: 'finding and managing live events w/ EventFinder',
     longDescription:
-      "Architectured a scalable event discovery platform using React, TypeScript, and Node.js, featuring real-time event search, geolocation integration, event details and filtering capabilities. Engineered an autocomplete search interface to prevent rate limiting while providing real-time suggestions from Ticketmaster's API.",
+      'EventFinder is a web application for discovering and managing live events such as concerts, sports, and theater shows. I implemented a responsive, mobile-first interface using Bootstrap’s CSS infrastructure and leveraged modern JavaScript (ES6+) features (including async/await, arrow functions, and destructuring) to improve readability, maintainability, and performance. I engineered an autocomplete search interface that integrates with the Ticketmaster API, delivering real-time suggestions while preventing rate limiting. Additionally, I incorporated the Spotify API to surface detailed artist information and enhance the user experience with richer event context.',
     technologies: [
       'React',
-      'TypeScript',
+      'JavaScript',
       'Node.js',
+      'Express',
+      'Bootstrap',
       'Ticketmaster API',
+      'Spotify API',
       'Geolocation',
-      'Autocomplete',
     ],
     year: '2022-2023',
     category: 'project',
+    images: [
+      '/projects/eventfinder/eventFinderSearch.png',
+      '/projects/eventfinder/eventFinderTeams.png',
+      '/projects/eventfinder/eventFinderMap.png',
+      '/projects/eventfinder/eventFinderVenue.png',
+    ],
   },
 ];
 
