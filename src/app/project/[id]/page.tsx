@@ -13,7 +13,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     <main className='flex-1 py-16'>
       <div className='mb-8'>
         <Link href='/work' className='font-mono text-sm hover:underline'>
-          ← back
+          ← back to work
         </Link>
       </div>
 

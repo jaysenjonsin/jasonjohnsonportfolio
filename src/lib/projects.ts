@@ -67,6 +67,26 @@ export const projects: Project[] = [
     onHomepage: true,
   },
   {
+    id: 'Amelia',
+    title: 'Amelia',
+    description: 'Taking flight w/ Amelia - 1st Place Hackathon Winner',
+    longDescription:
+      'Amelia is an aviation-themed game that challenges players to navigate to the other side of the map by choosing the right plane according to the weather conditions. I developed Amelia from inception to completion within 72 hours, utilizing React and Node.js. I implemented back-end API calls to access real-time weather-related data using Storm Glass API to enhance gameplay with dynamic weather conditions. My team was awarded 1st place overall among 100+ individual participants at the Aviation Hack 2023 hackathon.',
+    technologies: ['React', 'Node.js', 'Express', 'Storm Glass API'],
+    year: '2023',
+    category: 'project',
+    onHomepage: true,
+    images: [
+      '/projects/amelia/ameliaLoadingScreen.mp4',
+      '/projects/amelia/ameliaChoosePlane.webp',
+      '/projects/amelia/ameliaWin.mp4',
+      '/projects/amelia/ameliaLose1.mp4',
+      '/projects/amelia/ameliaLose2.mp4',
+      '/projects/amelia/ameliaLose3.mp4',
+      '/projects/amelia/ameliaResultScreens.avif',
+    ],
+  },
+  {
     id: 'Knoted',
     title: 'Knoted',
     description: 'making learning more efficient @ Knoted',
@@ -110,26 +130,6 @@ export const projects: Project[] = [
       '/projects/scribe/scribeHomepage.png',
       '/projects/scribe/scribeGenerateTest.gif',
       '/projects/scribe/scribeSignUp.png',
-    ],
-  },
-  {
-    id: 'Amelia',
-    title: 'Amelia',
-    description: 'Taking flight w/ Amelia - 1st Place Hackathon Winner',
-    longDescription:
-      'Amelia is an aviation-themed game that challenges players to navigate to the other side of the map by choosing the right plane according to the weather conditions. I developed Amelia from inception to completion within 72 hours, utilizing React and Node.js. I implemented back-end API calls to access real-time weather-related data using Storm Glass API to enhance gameplay with dynamic weather conditions. My team was awarded 1st place overall among 100+ individual participants at the Aviation Hack 2023 hackathon.',
-    technologies: ['React', 'Node.js', 'Storm Glass API'],
-    year: '2023',
-    category: 'project',
-    onHomepage: true,
-    images: [
-      '/projects/amelia/ameliaLoadingScreen.mp4',
-      '/projects/amelia/ameliaChoosePlane.webp',
-      '/projects/amelia/ameliaWin.mp4',
-      '/projects/amelia/ameliaLose1.mp4',
-      '/projects/amelia/ameliaLose2.mp4',
-      '/projects/amelia/ameliaLose3.mp4',
-      '/projects/amelia/ameliaResultScreens.avif',
     ],
   },
   {

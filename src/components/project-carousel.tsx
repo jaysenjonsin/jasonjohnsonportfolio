@@ -37,7 +37,7 @@ export const ProjectCarousel = ({ project }: ProjectCarouselProps) => {
             autoPlay
             loop
             muted
-            playsInline
+            playsInline //prevents video from entering fullscreen mode on mobile
             className='w-full h-80 object-cover'
             style={{
               objectPosition:
