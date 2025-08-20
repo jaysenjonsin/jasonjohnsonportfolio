@@ -36,9 +36,8 @@ export const projects: Project[] = [
     category: 'work',
     liveUrl: 'https://www.glassdoor.com/surveys/start',
     images: [
-      '/projects/glassdoor/glassdoorHomepage.gif',
+      '/projects/glassdoor/glassdoorHomepage.mp4',
       '/projects/glassdoor/addNewEmployer.gif',
-      // '/projects/glassdoor/cRegFlow.gif',
       '/projects/glassdoor/cRegFlow.mp4',
       '/projects/glassdoor/industryDetails.gif',
     ],
