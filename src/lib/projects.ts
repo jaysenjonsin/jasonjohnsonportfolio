@@ -144,15 +144,24 @@ export const projects: Project[] = [
     category: 'project',
   },
   {
-    id: 'Emilia',
-    title: 'Emilia',
+    id: 'Amelia',
+    title: 'Amelia',
     description: 'Aviation Inspired Game - 1st Place Winner',
     longDescription:
-      'Delivered Emilia from inception to completion within 72 hours, utilizing React and Node.js. Awarded 1st place overall among 100+ individual participants at the Aviation Hack 2023 hackathon.',
-    technologies: ['React', 'Node.js'],
+      'Amelia is an aviation-themed game that challenges players to navigate to the other side of the map by choosing the right plane according to the weather conditions. I developed Amelia from inception to completion within 72 hours, utilizing React and Node.js. I implemented back-end API calls to access real-time weather-related data using Storm Glass API to enhance gameplay with dynamic weather conditions. My team was awarded 1st place overall among 100+ individual participants at the Aviation Hack 2023 hackathon.',
+    technologies: ['React', 'Node.js', 'Storm Glass API'],
     year: '2023',
     category: 'project',
     onHomepage: true,
+    images: [
+      '/projects/amelia/ameliaLoadingScreen.mp4',
+      '/projects/amelia/ameliaChoosePlane.webp',
+      '/projects/amelia/ameliaWin.mp4',
+      '/projects/amelia/ameliaLose1.mp4',
+      '/projects/amelia/ameliaLose2.mp4',
+      '/projects/amelia/ameliaLose3.mp4',
+      '/projects/amelia/ameliaResultScreens.avif',
+    ],
   },
 ];
 
