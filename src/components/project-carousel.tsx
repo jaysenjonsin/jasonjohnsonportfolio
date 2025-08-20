@@ -51,7 +51,9 @@ export const ProjectCarousel = ({ project }: ProjectCarouselProps) => {
             src={images[currentIndex] || ''}
             alt={`${project.title} screenshot ${currentIndex + 1}`}
             className={`w-full h-80 ${
-              project.id === 'Knoted' ? 'object-contain' : 'object-cover'
+              project.id === 'Knoted' || project.id === 'Ignition'
+                ? 'object-contain'
+                : 'object-cover'
             }`}
             style={{
               objectPosition:

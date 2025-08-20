@@ -26,7 +26,9 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         </header>
 
         <div className='space-y-4'>
-          <ProjectCarousel project={project} />
+          {project.images && project.images.length > 0 && (
+            <ProjectCarousel project={project} />
+          )}
           <p className='font-mono text-sm leading-relaxed'>
             {project.longDescription}
           </p>

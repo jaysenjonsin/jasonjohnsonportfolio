@@ -88,7 +88,7 @@ export const projects: Project[] = [
     title: 'Scribe',
     description: 'generating automated tests @ Scribe',
     longDescription:
-      'As a Software Engineer, I contributed to building Scribe, an open-source tool developed under the OS Labs accelerator that automated Jest test generation for GraphQL schemas and resolvers. On the frontend, I created a React interface with an integrated code editor for writing and saving GraphQL queries/mutations, and implemented Redux Toolkit for centralized state management, improving readability and reducing prop-drilling complexity. On the backend, I configured an Express.js/Node.js server to generate type-safe unit and integration tests aligned with Apollo GraphQL standards. I also optimized API performance with Redis caching, cutting redundant database queries and improving response times by up to 80%.',
+      'Scribe is an open source application offering automated Jest type-test generation, schema validation, and smart resolver mock integration setups for GraphQL. As a software engineer, I contributed across the full stack to build a platform focused on improving the test driven development workflow. On the frontend, I created a React interface with an integrated code editor for writing and saving GraphQL queries/mutations, and implemented Redux Toolkit for centralized state management, improving readability and reducing prop-drilling complexity. On the backend, I configured an Express.js/Node.js server to generate type-safe unit and integration tests aligned with Apollo GraphQL standards. I also optimized API performance with Redis caching, cutting redundant database queries and improving response times by up to 80%.',
     technologies: [
       'React',
       'Typescript',
@@ -131,6 +131,31 @@ export const projects: Project[] = [
       '/projects/amelia/ameliaLose3.mp4',
       '/projects/amelia/ameliaResultScreens.avif',
     ],
+  },
+  {
+    id: 'Ignition',
+    title: 'Ignition',
+    description: 'Improving healthcare communication w/ Ignition',
+    longDescription:
+      'Created a full-stack Next.js 14 application, creating a robust workspace/task management system using Server Components for initial rendering, Appwrite for backend services and Hono for API routing, achieving a 20% faster initial page load. Built a task management interface featuring a responsive data table, drag-and-drop Kanban board, and interactive calendar view, implementing real-time updates and synchronized state management across all views using React Query and custom React hooks. Ensured strict end-to-end type safety across 30+ API routes and database models using TypeScript and Zod, achieving end-to-end schema coverage and improved runtime reliability.',
+    technologies: [
+      'Next.js 14',
+      'React',
+      'TypeScript',
+      'Appwrite',
+      'Hono',
+      'React Query',
+      'Zod',
+      'Server Components',
+    ],
+    year: '2023',
+    images: [
+      '/projects/ignition/ignitionLogin.png',
+      '/projects/ignition/ignitionHomepage.png',
+      '/projects/ignition/ignitionMedRequest.png',
+      '/projects/ignition/ignitionMedRequestFilled.png',
+    ],
+    category: 'project',
   },
   {
     id: 'Tasket',
