@@ -35,9 +35,9 @@ export default function FrostedGlass({ children }: FrostedGlassProps) {
     thickness: 0.15,
     chromaticAberration: 0.02,
     anisotropy: isDark ? 2 : 2,
-    roughness: isDark ? 0.9 : 0.8, // Higher roughness in dark mode for more grain texture
+    roughness: isDark ? 0.6 : 0.6,
     transparent: true,
-    opacity: isDark ? 0.55 : 0.55, // Less transparent in dark mode for stronger contrast
+    opacity: isDark ? 0.55 : 0.55,
     distortion: 0.9,
     distortionScale: 0.5, // Stronger scaling in dark mode for pronounced grain
     temporalDistortion: 0.08,

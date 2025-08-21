@@ -69,7 +69,7 @@ export const projects: Project[] = [
   {
     id: 'Amelia',
     title: 'Amelia',
-    description: 'Taking flight w/ Amelia - 1st Place Hackathon Winner',
+    description: 'taking flight w/ Amelia - 1st place hackathon winner',
     longDescription:
       'Amelia is an aviation-themed game that challenges players to navigate to the other side of the map by choosing the right plane according to the weather conditions. I developed Amelia from inception to completion within 72 hours, utilizing React and Node.js. I implemented back-end API calls to access real-time weather-related data using Storm Glass API to enhance gameplay with dynamic weather conditions. My team was awarded 1st place overall among 100+ individual participants at the Aviation Hack 2023 hackathon.',
     technologies: ['React', 'Node.js', 'Express', 'Storm Glass API'],
@@ -135,7 +135,7 @@ export const projects: Project[] = [
   {
     id: 'Ignition',
     title: 'Ignition',
-    description: 'Improving healthcare communication w/ Ignition',
+    description: 'improving healthcare communication w/ Ignition',
     longDescription:
       'Ignition is a task collaboration platform designed for integration with electronic health record systems to improve workflow efficiency for healthcare providers. I built this full-stack application using React and JavaScript, implementing JWT authentication for secure user sessions and Redux for centralized state management. I configured webpack to bundle and optimize the React application resulting in a highly efficient and maintainable build process. On the backend, I employed MongoDB with Mongoose to establish scalable and high-performing data storage for user and task functionality.',
     technologies: [
@@ -199,8 +199,8 @@ export const projects: Project[] = [
     images: [
       '/projects/eventfinder/eventFinderSearch.png',
       '/projects/eventfinder/eventFinderTeams.png',
-      '/projects/eventfinder/eventFinderMap.png',
       '/projects/eventfinder/eventFinderVenue.png',
+      '/projects/eventfinder/eventFinderMap.png',
     ],
   },
 ];

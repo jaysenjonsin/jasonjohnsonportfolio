@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { WaveForm } from './wave-form';
 import { ThemeToggle } from './theme-toggle';
 
 export const Header = () => {
@@ -9,7 +8,6 @@ export const Header = () => {
         <Link href='/' className='font-mono text-sm'>
           Jason Johnson
         </Link>
-        <WaveForm />
       </div>
       <nav className='flex items-center space-x-2 sm:space-x-4 font-mono text-sm'>
         <Link href='/work' className='hover:underline'>
