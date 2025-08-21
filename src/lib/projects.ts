@@ -85,6 +85,7 @@ export const projects: Project[] = [
       '/projects/amelia/ameliaLose3.mp4',
       '/projects/amelia/ameliaResultScreens.avif',
     ],
+    githubUrl: 'https://github.com/jaysenjonsin/amelia',
   },
   {
     id: 'Knoted',
@@ -202,6 +203,7 @@ export const projects: Project[] = [
       '/projects/eventFinder/eventFinderVenue.png',
       '/projects/eventFinder/eventFinderMap.png',
     ],
+    githubUrl: 'https://github.com/jaysenjonsin/ticketMaster',
   },
 ];
 
