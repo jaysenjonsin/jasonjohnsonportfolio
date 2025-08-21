@@ -37,14 +37,18 @@ export default function ThreeBackground() {
     // Small delay to ensure DOM is ready
     const timer = setTimeout(() => {
       const webglSupport = hasWebGL();
-      setWebGLSupported(webglSupport);
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+      // Disable Three.js on mobile for better performance
+      const shouldUseThreeJS = webglSupport && !isMobile;
+      setWebGLSupported(shouldUseThreeJS);
 
-      // If WebGL is not supported, trigger content show after welcome screen
-      if (!webglSupport) {
+      // If Three.js is disabled, trigger content show after welcome screen
+      if (!shouldUseThreeJS) {
         setTimeout(() => {
           setShowWelcome(false);
           document.documentElement.classList.add('content-ready');
-          console.log('Content ready triggered (WebGL not supported)');
+          console.log('Content ready triggered (Three.js disabled for mobile/WebGL)');
         }, 500);
       }
     }, 100);
