@@ -127,7 +127,7 @@ export const projects: Project[] = [
     articleUrl:
       'https://medium.com/@scribegraphql/writing-jest-tests-for-graphql-scribe-graphql-387e414eea0c',
     images: [
-      '/projects/scribe/scribeHomepage.png',
+      '/projects/scribe/scribeHomepage copy.png',
       '/projects/scribe/scribeGenerateTest.gif',
       '/projects/scribe/scribeSignUp.png',
     ],
@@ -197,10 +197,10 @@ export const projects: Project[] = [
     year: '2022-2023',
     category: 'project',
     images: [
-      '/projects/eventfinder/eventFinderSearch.png',
-      '/projects/eventfinder/eventFinderTeams.png',
-      '/projects/eventfinder/eventFinderVenue.png',
-      '/projects/eventfinder/eventFinderMap.png',
+      '/projects/eventFinder/eventFinderSearch.png',
+      '/projects/eventFinder/eventFinderTeams.png',
+      '/projects/eventFinder/eventFinderVenue.png',
+      '/projects/eventFinder/eventFinderMap.png',
     ],
   },
 ];
