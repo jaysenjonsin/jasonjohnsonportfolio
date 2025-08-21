@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 import { Project } from '@/lib/projects';
 
 interface ProjectCarouselProps {
@@ -38,7 +39,9 @@ export const ProjectCarousel = ({ project }: ProjectCarouselProps) => {
             loop
             muted
             playsInline //prevents video from entering fullscreen mode on mobile
-            className='w-full h-80 object-cover'
+            className={`w-full h-80 ${
+              project.id === 'Amelia' ? 'object-contain' : 'object-cover'
+            }`}
             style={{
               objectPosition:
                 images[currentIndex] === '/projects/glassdoor/cRegFlow.mp4'
@@ -47,13 +50,16 @@ export const ProjectCarousel = ({ project }: ProjectCarouselProps) => {
             }}
           />
         ) : (
-          <img
+          <Image
             src={images[currentIndex] || ''}
             alt={`${project.title} screenshot ${currentIndex + 1}`}
+            width={800}
+            height={320}
             className={`w-full h-80 ${
               project.id === 'Knoted' ||
               project.id === 'Ignition' ||
-              project.id === 'Scribe'
+              project.id === 'Scribe' ||
+              project.id === 'Amelia'
                 ? 'object-contain'
                 : 'object-cover'
             }`}
@@ -63,6 +69,7 @@ export const ProjectCarousel = ({ project }: ProjectCarouselProps) => {
                   ? 'center bottom'
                   : 'center center',
             }}
+            priority={currentIndex === 0}
           />
         )}
 
