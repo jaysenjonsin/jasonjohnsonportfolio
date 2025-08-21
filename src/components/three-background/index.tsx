@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 import dynamic from 'next/dynamic';
 
 // Dynamically import the Canvas component to avoid SSR issues
@@ -30,6 +31,8 @@ export default function ThreeBackground() {
   const [webGLSupported, setWebGLSupported] = useState<boolean | null>(null);
   const [isClient, setIsClient] = useState(false);
   const [showWelcome, setShowWelcome] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     setIsClient(true);
@@ -37,10 +40,12 @@ export default function ThreeBackground() {
     // Small delay to ensure DOM is ready
     const timer = setTimeout(() => {
       const webglSupport = hasWebGL();
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const mobileDetected = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      
+      setIsMobile(mobileDetected);
       
       // Disable Three.js on mobile for better performance
-      const shouldUseThreeJS = webglSupport && !isMobile;
+      const shouldUseThreeJS = webglSupport && !mobileDetected;
       setWebGLSupported(shouldUseThreeJS);
 
       // If Three.js is disabled, trigger content show after welcome screen
@@ -69,6 +74,18 @@ export default function ThreeBackground() {
   // Always render the same structure to avoid hydration mismatches
   return (
     <>
+      {/* Mobile background image */}
+      {isClient && isMobile && (
+        <div
+          className={`fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat ${
+            resolvedTheme === 'dark' ? 'invert' : ''
+          }`}
+          style={{
+            backgroundImage: 'url("/portfolioBgMobile.png")',
+          }}
+        />
+      )}
+
       {/* Only render canvas when client-side and WebGL is supported */}
       {isClient && webGLSupported && (
         <ThreeCanvas onReady={handleCanvasReady} />
