@@ -93,7 +93,14 @@ export const projects: Project[] = [
     description: 'making learning more efficient @ Knoted',
     longDescription:
       "Knoted doesn't just help you learn — it helps you learn how to learn. Personalized flashcards/notes, spaced repetition algorithms, audio reviews, and more in one hub. Currently in production.",
-    technologies: ['Technology 5', 'Technology 6'],
+    technologies: [
+      'React',
+      'Typescript',
+      'Next.js',
+      'Tailwind',
+      'Supabase',
+      'PostgreSQL',
+    ],
     year: '2025',
     category: 'project',
     onHomepage: true,

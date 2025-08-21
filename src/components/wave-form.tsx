@@ -8,7 +8,7 @@ export const WaveForm = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   const [isHovered, setIsHovered] = useState(false);
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -28,7 +28,8 @@ export const WaveForm = () => {
       ctx.clearRect(0, 0, width, height);
 
       // Set line style based on theme - using same colors as text
-      ctx.strokeStyle = theme === 'dark' ? 'hsl(0 0% 98%)' : 'hsl(0 0% 10%)';
+      const currentTheme = resolvedTheme || theme;
+      ctx.strokeStyle = currentTheme === 'dark' ? 'hsl(0 0% 98%)' : 'hsl(0 0% 10%)';
       ctx.lineWidth = 1;
       ctx.lineCap = 'round';
 
@@ -62,7 +63,7 @@ export const WaveForm = () => {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [isHovered, theme]);
+  }, [isHovered, theme, resolvedTheme]);
 
   return (
     <Link
