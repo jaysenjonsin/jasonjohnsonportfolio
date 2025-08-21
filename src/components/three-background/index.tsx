@@ -14,12 +14,12 @@ function hasWebGL(): boolean {
 
   try {
     const canvas = document.createElement('canvas');
-    const context =
-      canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    const context = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
     if (!context) return false;
 
     // Additional check to ensure WebGL is actually working
-    const renderer = context.getParameter(context.RENDERER);
+    const gl = context as WebGLRenderingContext;
+    const renderer = gl.getParameter(gl.RENDERER);
     return renderer !== null;
   } catch (e) {
     return false;

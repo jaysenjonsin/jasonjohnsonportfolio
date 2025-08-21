@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { getProjectById } from '@/lib/projects';
 import { notFound } from 'next/navigation';
 import { ProjectCarousel } from '@/components/project-carousel';
-export default function ProjectPage({ params }: { params: { id: string } }) {
-  const project = getProjectById(params.id);
+export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const project = getProjectById(id);
 
   if (!project) {
     notFound();
