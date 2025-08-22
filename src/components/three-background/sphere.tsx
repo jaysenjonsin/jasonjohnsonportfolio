@@ -4,7 +4,7 @@ import { OrthographicCamera } from '@react-three/drei';
 import { useEffect, useState } from 'react';
 
 export default function Sphere() {
-  const [isDark, setIsDark] = useState(true); // Default to dark
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
     // Check initial theme

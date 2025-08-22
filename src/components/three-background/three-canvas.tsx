@@ -17,9 +17,9 @@ export default function ThreeCanvas({ onReady }: ThreeCanvasProps) {
         orthographic
         camera={{ position: [0, 0, 100], zoom: 100 }}
         gl={{
-          alpha: true,
-          antialias: true,
-          powerPreference: 'default', // Better compatibility
+          alpha: true, //make bg transparent
+          antialias: true, //smooth edges
+          powerPreference: 'default',
         }}
         style={{ background: 'transparent' }}
         onCreated={({ gl }) => {

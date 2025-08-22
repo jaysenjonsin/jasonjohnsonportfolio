@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 interface FrostedGlassProps {
   children: React.ReactNode;
 }
-
+//the "filter" that makes the background look frosted. takes everything inside it (the sphere + lighting) and applies frosted glass effect
 export default function FrostedGlass({ children }: FrostedGlassProps) {
   const { viewport } = useThree();
   const [isDark, setIsDark] = useState(true);
@@ -44,6 +44,9 @@ export default function FrostedGlass({ children }: FrostedGlassProps) {
   };
 
   return (
+    //mesh = 2D plane that covers the entire screen. scale = size of the plane.
+    //analogy: glass window = frame + glass pane + window treatment
+    //mesh = frame, planeGeometry = glass pane, MeshTransmissionMaterial = window treatment(frosted effect). without planeGemoetry, there'd be no "canvas" for frosted effect to exist on
     <mesh scale={[viewport.width, viewport.height, 1]}>
       <planeGeometry />
       <MeshTransmissionMaterial {...glassProps}>

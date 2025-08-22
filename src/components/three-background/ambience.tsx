@@ -3,8 +3,9 @@
 import { useFrame } from '@react-three/fiber';
 import { Environment, Lightformer } from '@react-three/drei';
 
+//moves camera around sphere, creates the lighting that the sphere reflects
 export default function Ambience() {
-  // Smooth constant rotation around the sphere
+  // Smooth constant rotation around the sphere. think of useFrame as setIntereval for 3D animation. runs 60 times per second
   useFrame((state) => {
     const t = state.clock.elapsedTime / 3.0; // Slow, smooth rotation
     const radius = 15;
@@ -20,12 +21,14 @@ export default function Ambience() {
   return (
     <Environment preset='city' resolution={256}>
       <group rotation={[-Math.PI / 4, 0, 0]}>
+        {/* lightformer = individual light sources that show up as reflections */}
         <Lightformer
           intensity={4}
           rotation-x={Math.PI / 2}
           position={[0, 5, -9]}
           scale={[10, 10, 1]}
         />
+        {/* creates 8 circular lights in a row, creating repeating reflections on the sphere */}
         {[2, 0, 2, 0, 2, 0, 2, 0].map((x, i) => (
           <Lightformer
             key={i}
