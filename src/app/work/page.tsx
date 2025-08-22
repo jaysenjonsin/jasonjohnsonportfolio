@@ -24,26 +24,24 @@ export default function WorkPage() {
               </section>
             ))}
         </div>
-        <section className='mt-8'>
-          <div className='space-y-8'>
-            {projects
-              .filter((project) => project.category === 'project')
-              .map((project) => (
-                <section key={project.id}>
-                  <h2 className='font-mono text-md mb-2'>{project.title}</h2>
-                  <p className='font-mono text-sm leading-relaxed max-w-lg mb-2'>
-                    {project.description}
-                  </p>
-                  <Link
-                    href={`/project/${project.id}`}
-                    className='font-mono text-sm hover:underline'
-                  >
-                    view work →
-                  </Link>
-                </section>
-              ))}
-          </div>
-        </section>
+        <div className='space-y-8 mt-8'>
+          {projects
+            .filter((project) => project.category === 'project')
+            .map((project) => (
+              <section key={project.id}>
+                <h2 className='font-mono text-md mb-2'>{project.title}</h2>
+                <p className='font-mono text-sm leading-relaxed max-w-lg mb-2'>
+                  {project.description}
+                </p>
+                <Link
+                  href={`/project/${project.id}`}
+                  className='font-mono text-sm hover:underline'
+                >
+                  view work →
+                </Link>
+              </section>
+            ))}
+        </div>
       </main>
     </>
   );
