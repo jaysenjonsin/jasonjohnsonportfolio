@@ -15,7 +15,7 @@ export const Header = () => {
           projects
         </Link> */}
         <Link
-          href='/resume.pdf'
+          href='/Jason Johnson resume.pdf'
           target='_blank'
           rel='noopener noreferrer'
           className='hover:underline'
