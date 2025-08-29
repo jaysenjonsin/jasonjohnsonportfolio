@@ -1,9 +1,42 @@
-import Link from 'next/link';
-import { ThemeToggle } from '@/components/theme-toggle';
-import { Header } from '../../components/header';
-import { Footer } from '../../components/footer';
-
 export default function About() {
+  const languages = [
+    'TypeScript',
+    'JavaScript(ES6)',
+    'Python',
+    'HTML/CSS',
+    'Ruby',
+  ];
+  const librariesFrameworks = [
+    'React',
+    'Next.js',
+    'Node.js',
+    'Express',
+    'GraphQL',
+    'Tailwind',
+    'SCSS',
+    'MUI',
+    'Bootstrap',
+  ];
+  const developmentToolsPlatforms = [
+    'Git',
+    'GitHub',
+    'Vercel',
+    'Netlify',
+    'VS Code',
+    'Figma',
+    'Cursor',
+    'Claude Code',
+  ];
+  const databases = [
+    'SQL',
+    'NoSQL',
+    'PostgreSQL',
+    'MongoDB',
+    'Redis',
+    'Supabase',
+    'Firebase',
+  ];
+
   return (
     <main className='flex-1 py-16'>
       <h1 className='text-3xl font-mono mb-8'>about me</h1>
@@ -17,13 +50,7 @@ export default function About() {
           <div>
             <h3 className='font-mono text-xs mb-2'>languages</h3>
             <div className='flex flex-wrap gap-1'>
-              {[
-                'TypeScript',
-                'JavaScript(ES6)',
-                'Python',
-                'HTML/CSS',
-                'Ruby',
-              ].map((skill) => (
+              {languages.map((skill) => (
                 <span
                   key={skill}
                   className='font-mono text-xs px-2 py-1 border border-border rounded-sm'
@@ -37,17 +64,7 @@ export default function About() {
           <div>
             <h3 className='font-mono text-xs mb-2'>libraries/frameworks</h3>
             <div className='flex flex-wrap gap-1'>
-              {[
-                'React',
-                'Next.js',
-                'Node.js',
-                'Express',
-                'GraphQL',
-                'Tailwind',
-                'SCSS',
-                'MUI',
-                'Bootstrap',
-              ].map((skill) => (
+              {librariesFrameworks.map((skill) => (
                 <span
                   key={skill}
                   className='font-mono text-xs px-2 py-1 border border-border rounded-sm'
@@ -63,31 +80,21 @@ export default function About() {
               development tools/platforms
             </h3>
             <div className='flex flex-wrap gap-1'>
-              {['Git', 'GitHub', 'Vercel', 'Netlify', 'VS Code', 'Figma'].map(
-                (skill) => (
-                  <span
-                    key={skill}
-                    className='font-mono text-xs px-2 py-1 border border-border rounded-sm'
-                  >
-                    {skill}
-                  </span>
-                )
-              )}
+              {developmentToolsPlatforms.map((skill) => (
+                <span
+                  key={skill}
+                  className='font-mono text-xs px-2 py-1 border border-border rounded-sm'
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
 
           <div>
             <h3 className='font-mono text-xs mb-2'>databases</h3>
             <div className='flex flex-wrap gap-1'>
-              {[
-                'SQL',
-                'NoSQL',
-                'PostgreSQL',
-                'MongoDB',
-                'Redis',
-                'Supabase',
-                'Firebase',
-              ].map((skill) => (
+              {databases.map((skill) => (
                 <span
                   key={skill}
                   className='font-mono text-xs px-2 py-1 border border-border rounded-sm'

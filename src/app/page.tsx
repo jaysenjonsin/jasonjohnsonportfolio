@@ -1,4 +1,3 @@
-import { ThemeToggle } from '@/components/theme-toggle';
 import { projects } from '@/lib/projects';
 import Link from 'next/link';
 export default function Home() {
@@ -8,8 +7,7 @@ export default function Home() {
         <h1 className='text-3xl font-mono mb-8'> Hi, I'm Jason.</h1>
         <p className='font-mono text-sm leading-relaxed max-w-lg'>
           I'm a Full Stack Developer focused on building responsive, accessible,
-          and performant web applications with modern technologies. Currently @
-          Glassdoor.
+          and performant web applications with modern technologies.
         </p>
       </section>
 
