@@ -1,3 +1,21 @@
+function SkillCategory({ title, skills }: { title: string; skills: string[] }) {
+  return (
+    <div>
+      <h3 className='font-mono text-xs mb-2'>{title}</h3>
+      <div className='flex flex-wrap gap-1'>
+        {skills.map((skill) => (
+          <span
+            key={skill}
+            className='font-mono text-xs px-2 py-1 border border-border rounded-sm'
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function About() {
   const languages = [
     'TypeScript',
@@ -47,63 +65,10 @@ export default function About() {
       <section className='mb-16'>
         <h2 className='font-mono text-sm mb-4'>skills</h2>
         <div className='space-y-4'>
-          <div>
-            <h3 className='font-mono text-xs mb-2'>languages</h3>
-            <div className='flex flex-wrap gap-1'>
-              {languages.map((skill) => (
-                <span
-                  key={skill}
-                  className='font-mono text-xs px-2 py-1 border border-border rounded-sm'
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className='font-mono text-xs mb-2'>libraries/frameworks</h3>
-            <div className='flex flex-wrap gap-1'>
-              {librariesFrameworks.map((skill) => (
-                <span
-                  key={skill}
-                  className='font-mono text-xs px-2 py-1 border border-border rounded-sm'
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className='font-mono text-xs mb-2'>
-              development tools/platforms
-            </h3>
-            <div className='flex flex-wrap gap-1'>
-              {developmentToolsPlatforms.map((skill) => (
-                <span
-                  key={skill}
-                  className='font-mono text-xs px-2 py-1 border border-border rounded-sm'
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className='font-mono text-xs mb-2'>databases</h3>
-            <div className='flex flex-wrap gap-1'>
-              {databases.map((skill) => (
-                <span
-                  key={skill}
-                  className='font-mono text-xs px-2 py-1 border border-border rounded-sm'
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
+          <SkillCategory title='languages' skills={languages} />
+          <SkillCategory title='libraries/frameworks' skills={librariesFrameworks} />
+          <SkillCategory title='development tools/platforms' skills={developmentToolsPlatforms} />
+          <SkillCategory title='databases' skills={databases} />
         </div>
       </section>
     </main>
