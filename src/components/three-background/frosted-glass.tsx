@@ -17,10 +17,10 @@ export default function FrostedGlass({ children, isDark = true }: FrostedGlassPr
     samples: isDark ? 1 : 2,
     thickness: 0.15,
     chromaticAberration: 0.02,
-    anisotropy: isDark ? 2 : 2,
-    roughness: isDark ? 0.6 : 0.6,
+    anisotropy: 2,
+    roughness: 0.6,
     transparent: true,
-    opacity: isDark ? 0.55 : 0.55,
+    opacity: 0.55,
     distortion: 0.9,
     distortionScale: 0.5, // Stronger scaling in dark mode for pronounced grain
     temporalDistortion: 0.08,

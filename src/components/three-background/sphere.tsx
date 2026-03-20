@@ -16,7 +16,7 @@ export default function Sphere({ isDark = true }: SphereProps) {
         <sphereGeometry args={[10, 32, 32]} />
         <meshStandardMaterial
           color={sphereColor}
-          metalness={isDark ? 2 : 0.8}
+          metalness={isDark ? 1 : 0.8}
           roughness={0.2}
         />
       </mesh>

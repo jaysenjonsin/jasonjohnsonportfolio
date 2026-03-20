@@ -11,9 +11,6 @@ export const Header = () => {
         <Link href='/work' className='hover:underline'>
           work
         </Link>
-        {/* <Link href='/projects' className='hover:underline'>
-          projects
-        </Link> */}
         <Link
           href='/resume.pdf'
           target='_blank'

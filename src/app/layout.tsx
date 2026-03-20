@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
-import { Header } from '../components/header';
-import { Footer } from '../components/footer';
-import ThreeBackground from '../components/three-background';
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
+import ThreeBackground from '@/components/three-background';
 
 const inter = Inter({
   subsets: ['latin'],
