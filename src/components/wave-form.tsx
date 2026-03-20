@@ -10,6 +10,16 @@ export const WaveForm = () => {
   const [isHovered, setIsHovered] = useState(false);
   const { theme, resolvedTheme } = useTheme();
 
+  // Store theme values in refs so the animation loop always reads the latest
+  // value without needing to be restarted on every theme change
+  const themeRef = useRef(theme);
+  const resolvedThemeRef = useRef(resolvedTheme);
+
+  useEffect(() => {
+    themeRef.current = theme;
+    resolvedThemeRef.current = resolvedTheme;
+  }, [theme, resolvedTheme]);
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -27,13 +37,12 @@ export const WaveForm = () => {
     const animate = () => {
       ctx.clearRect(0, 0, width, height);
 
-      // Set line style based on theme - using same colors as text
-      const currentTheme = resolvedTheme || theme;
+      // Read theme from ref — always current without re-running the effect
+      const currentTheme = resolvedThemeRef.current || themeRef.current;
       ctx.strokeStyle = currentTheme === 'dark' ? 'hsl(0 0% 98%)' : 'hsl(0 0% 10%)';
       ctx.lineWidth = 1;
       ctx.lineCap = 'round';
 
-      // Draw waveform bars
       const bars = 8;
       const barWidth = 2;
       const spacing = (width - bars * barWidth) / (bars - 1);
@@ -63,7 +72,7 @@ export const WaveForm = () => {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [isHovered, theme, resolvedTheme]);
+  }, [isHovered]); // theme/resolvedTheme removed — read per-frame via refs instead
 
   return (
     <Link
