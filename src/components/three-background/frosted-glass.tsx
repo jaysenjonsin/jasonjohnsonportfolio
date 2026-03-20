@@ -2,32 +2,15 @@
 
 import { useThree } from '@react-three/fiber';
 import { MeshTransmissionMaterial, RenderTexture } from '@react-three/drei';
-import { useEffect, useState } from 'react';
 
 interface FrostedGlassProps {
   children: React.ReactNode;
+  isDark?: boolean;
 }
+
 //the "filter" that makes the background look frosted. takes everything inside it (the sphere + lighting) and applies frosted glass effect
-export default function FrostedGlass({ children }: FrostedGlassProps) {
+export default function FrostedGlass({ children, isDark = true }: FrostedGlassProps) {
   const { viewport } = useThree();
-  const [isDark, setIsDark] = useState(true);
-
-  useEffect(() => {
-    const checkTheme = () => {
-      const isDarkMode = document.documentElement.classList.contains('dark');
-      setIsDark(isDarkMode);
-    };
-
-    checkTheme();
-
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class'],
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   // Enhanced grain and contrast for both modes
   const glassProps = {

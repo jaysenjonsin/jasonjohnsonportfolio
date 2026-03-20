@@ -35,10 +35,10 @@ const config = {
         border: 'hsl(var(--border))',
       },
     },
-  },
-  fontFamily: {
-    sans: ['var(--font-sans)'],
-    mono: ['var(--font-mono)'],
+    fontFamily: {
+      sans: ['var(--font-sans)'],
+      mono: ['var(--font-mono)'],
+    },
   },
   plugins: [],
 } satisfies Config;

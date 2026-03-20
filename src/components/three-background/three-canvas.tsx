@@ -8,9 +8,10 @@ import Ambience from './ambience';
 
 interface ThreeCanvasProps {
   onReady?: () => void;
+  isDark?: boolean;
 }
 
-export default function ThreeCanvas({ onReady }: ThreeCanvasProps) {
+export default function ThreeCanvas({ onReady, isDark = true }: ThreeCanvasProps) {
   return (
     <div className='fixed inset-0 -z-10'>
       <Canvas
@@ -37,8 +38,8 @@ export default function ThreeCanvas({ onReady }: ThreeCanvasProps) {
         }}
       >
         <Suspense fallback={null}>
-          <FrostedGlass>
-            <Sphere />
+          <FrostedGlass isDark={isDark}>
+            <Sphere isDark={isDark} />
             <Ambience />
           </FrostedGlass>
         </Suspense>

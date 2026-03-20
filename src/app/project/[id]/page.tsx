@@ -1,7 +1,12 @@
 import Link from 'next/link';
-import { getProjectById } from '@/lib/projects';
+import { getProjectById, projects } from '@/lib/projects';
 import { notFound } from 'next/navigation';
 import { ProjectCarousel } from '@/components/project-carousel';
+
+export function generateStaticParams() {
+  return projects.map((project) => ({ id: project.id }));
+}
+
 export default async function ProjectPage({
   params,
 }: {

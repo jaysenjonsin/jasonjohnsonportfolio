@@ -88,7 +88,7 @@ export default function ThreeBackground() {
 
       {/* Only render canvas when client-side and WebGL is supported */}
       {isClient && webGLSupported && (
-        <ThreeCanvas onReady={handleCanvasReady} />
+        <ThreeCanvas onReady={handleCanvasReady} isDark={resolvedTheme === 'dark'} />
       )}
 
       {/* Always render welcome overlay initially, hide it when ready */}

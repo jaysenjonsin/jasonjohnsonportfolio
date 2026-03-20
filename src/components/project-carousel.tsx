@@ -12,10 +12,7 @@ interface ProjectCarouselProps {
 export const ProjectCarousel = ({ project }: ProjectCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Direct access to images from project object
-  const images = project.images || [
-    `/placeholder.svg?height=400&width=600&query=no images for ${project.id}`,
-  ];
+  const images = project.images ?? [];
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>

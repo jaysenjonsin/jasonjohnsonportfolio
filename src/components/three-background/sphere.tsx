@@ -1,31 +1,12 @@
 'use client';
 
 import { OrthographicCamera } from '@react-three/drei';
-import { useEffect, useState } from 'react';
 
-export default function Sphere() {
-  const [isDark, setIsDark] = useState(true);
+interface SphereProps {
+  isDark?: boolean;
+}
 
-  useEffect(() => {
-    // Check initial theme
-    const checkTheme = () => {
-      const isDarkMode = document.documentElement.classList.contains('dark');
-      setIsDark(isDarkMode);
-    };
-
-    checkTheme();
-
-    // Watch for theme changes
-    const observer = new MutationObserver(checkTheme);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class'],
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Use dark color in dark mode, light color in light mode
+export default function Sphere({ isDark = true }: SphereProps) {
   const sphereColor = isDark ? '#111' : '#f0f0f0';
 
   return (
@@ -35,7 +16,7 @@ export default function Sphere() {
         <sphereGeometry args={[10, 32, 32]} />
         <meshStandardMaterial
           color={sphereColor}
-          metalness={isDark ? 2 : 0.8} // Full metallic in dark mode for bright reflections
+          metalness={isDark ? 2 : 0.8}
           roughness={0.2}
         />
       </mesh>
