@@ -53,7 +53,6 @@ export default function ThreeBackground() {
         setTimeout(() => {
           setShowWelcome(false);
           document.documentElement.classList.add('content-ready');
-          console.log('Content ready triggered (Three.js disabled for mobile/WebGL)');
         }, 500);
       }
     }, 100);

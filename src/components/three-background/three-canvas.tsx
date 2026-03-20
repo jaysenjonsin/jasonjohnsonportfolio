@@ -24,7 +24,6 @@ export default function ThreeCanvas({ onReady, isDark = true }: ThreeCanvasProps
         }}
         style={{ background: 'transparent' }}
         onCreated={({ gl }) => {
-          console.log('Three.js Canvas created successfully');
           gl.setClearColor(0x000000, 0); // Transparent background
           // Call onReady after the canvas is created and first frame is ready
           if (onReady) {
@@ -33,9 +32,7 @@ export default function ThreeCanvas({ onReady, isDark = true }: ThreeCanvasProps
             });
           }
         }}
-        onError={(error) => {
-          console.error('Three.js Canvas error:', error);
-        }}
+        onError={() => {}}
       >
         <Suspense fallback={null}>
           <FrostedGlass isDark={isDark}>
