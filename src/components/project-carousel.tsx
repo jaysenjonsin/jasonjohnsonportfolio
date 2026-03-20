@@ -37,7 +37,7 @@ export const ProjectCarousel = ({ project }: ProjectCarouselProps) => {
             muted
             playsInline //prevents video from entering fullscreen mode on mobile
             className={`w-full h-80 ${
-              project.id === 'Amelia' ? 'object-contain' : 'object-cover'
+              project.imageObjectFit === 'contain' ? 'object-contain' : 'object-cover'
             }`}
             style={{
               objectPosition:
@@ -53,12 +53,7 @@ export const ProjectCarousel = ({ project }: ProjectCarouselProps) => {
             width={800}
             height={320}
             className={`w-full h-80 ${
-              project.id === 'Knoted' ||
-              project.id === 'Ignition' ||
-              project.id === 'Scribe' ||
-              project.id === 'Amelia'
-                ? 'object-contain'
-                : 'object-cover'
+              project.imageObjectFit === 'contain' ? 'object-contain' : 'object-cover'
             }`}
             style={{
               objectPosition:

@@ -11,6 +11,7 @@ export type Project = {
   category: 'work' | 'project';
   images?: string[];
   onHomepage?: boolean;
+  imageObjectFit?: 'contain' | 'cover';
 };
 
 export const projects: Project[] = [
@@ -86,6 +87,7 @@ export const projects: Project[] = [
       '/projects/amelia/ameliaResultScreens.avif',
     ],
     githubUrl: 'https://github.com/jaysenjonsin/amelia',
+    imageObjectFit: 'contain',
   },
   {
     id: 'Knoted',
@@ -110,6 +112,7 @@ export const projects: Project[] = [
       '/projects/knoted/knotedDashboard.png',
       '/projects/knoted/knotedUpload.png',
     ],
+    imageObjectFit: 'contain',
   },
   {
     id: 'Scribe',
@@ -139,6 +142,7 @@ export const projects: Project[] = [
       '/projects/scribe/scribeGenerateTest.gif',
       '/projects/scribe/scribeSignUp.png',
     ],
+    imageObjectFit: 'contain',
   },
   {
     id: 'Ignition',
@@ -166,6 +170,7 @@ export const projects: Project[] = [
     ],
     category: 'project',
     githubUrl: 'https://github.com/jaysenjonsin/Ignition',
+    imageObjectFit: 'contain',
   },
   // {
   //   id: 'Tasket',
