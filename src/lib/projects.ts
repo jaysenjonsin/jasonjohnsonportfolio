@@ -16,6 +16,36 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'Chartbeat',
+    title: 'Chartbeat',
+    description: 'building real-time analytics tools @ Chartbeat',
+    longDescription:
+      'Chartbeat is an analytics platform that helps publishers understand and grow audience engagement in real time. As a QA/Software Engineer Intern at Chartbeat, I shipped the recirculation sorting feature end-to-end across the React/TypeScript dashboard and a Python/FastAPI data service, unlocking a new content ranking signal for 50+ publishers. I introduced the first automated merge gate for the Conversions dashboard by integrating a Dockerized Playwright smoke suite into Jenkins CI, covering auth, API-driven UI updates, URL state sync, and error handling for a React SPA. I also built a React hook that gates two mutually exclusive UI states without redundant API calls across sibling components, preventing dashboard users from seeing a false "no data" error during Chartbeat\'s 2-hour post-midnight pipeline delay. To strengthen data integrity, I developed property-based and invariant tests for FastAPI services using Python, pytest, and Hypothesis, validating data across Snowflake pipelines and increasing test coverage by 54%. I also fixed broken Python/pytest E2E test infrastructure across Chartbeat\'s historical analytics service and extended the harness with 7 parametrized test cases across 3 APIs to establish regression protection for recently shipped geo analytics features. Outside of my day-to-day work, I competed in Chartbeat\'s company-wide hackathon alongside 3 teammates. We built Labs, a two-part workflow for closing the gap between a great product idea and a customer actually seeing it: a portal where anyone on the team could submit an idea and use AI to rapidly turn it into a prototype, and a new Labs Showcase tab in the Chartbeat product where those prototypes get surfaced to real customers to try, vote on, and leave feedback on. Our team won first place overall.',
+    technologies: [
+      'React',
+      'Typescript',
+      'Python',
+      'FastAPI',
+      'Playwright',
+      'Docker',
+      'Jenkins',
+      'pytest',
+      'Hypothesis',
+      'Snowflake',
+    ],
+    year: '2026',
+    category: 'work',
+    onHomepage: true,
+    images: [
+      '/projects/chartbeat/chartbeatGscOverview.gif',
+      '/projects/chartbeat/chartbeatUnifiedDashboardView.png',
+      '/projects/chartbeat/chartbeatSortingByRecircAuthors.png',
+      '/projects/chartbeat/chartbeatDisabledTsf.png',
+      '/projects/chartbeat/chartbeatLabs.png',
+    ],
+    imageObjectFit: 'contain',
+  },
+  {
     id: 'Glassdoor',
     title: 'Glassdoor',
     description: 'growing user engagement and content contribution @ Glassdoor',
