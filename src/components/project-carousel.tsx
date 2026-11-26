@@ -13,6 +13,7 @@ export const ProjectCarousel = ({ project }: ProjectCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = project.images ?? [];
+  const hasMultipleImages = images.length > 1;
 
   const goToPrevious = () => {
     setCurrentIndex((prevIndex) =>
@@ -65,39 +66,43 @@ export const ProjectCarousel = ({ project }: ProjectCarouselProps) => {
           />
         )}
 
-        {/* Navigation buttons */}
-        <button
-          onClick={goToPrevious}
-          className='absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-background/80 hover:bg-background border border-border rounded-sm transition-colors'
-          aria-label='Previous image'
-        >
-          <ChevronLeft className='w-4 h-4' />
-        </button>
+        {hasMultipleImages && (
+          <>
+            <button
+              onClick={goToPrevious}
+              className='absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-background/80 hover:bg-background border border-border rounded-sm transition-colors'
+              aria-label='Previous image'
+            >
+              <ChevronLeft className='w-4 h-4' />
+            </button>
 
-        <button
-          onClick={goToNext}
-          className='absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-background/80 hover:bg-background border border-border rounded-sm transition-colors'
-          aria-label='Next image'
-        >
-          <ChevronRight className='w-4 h-4' />
-        </button>
+            <button
+              onClick={goToNext}
+              className='absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-background/80 hover:bg-background border border-border rounded-sm transition-colors'
+              aria-label='Next image'
+            >
+              <ChevronRight className='w-4 h-4' />
+            </button>
+          </>
+        )}
       </div>
 
-      {/* Dots indicator */}
-      <div className='flex justify-center mt-4 space-x-2'>
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-colors ${
-              index === currentIndex
-                ? 'bg-foreground'
-                : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
-            }`}
-            aria-label={`Go to image ${index + 1}`}
-          />
-        ))}
-      </div>
+      {hasMultipleImages && (
+        <div className='flex justify-center mt-4 space-x-2'>
+          {images.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                index === currentIndex
+                  ? 'bg-foreground'
+                  : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
+              }`}
+              aria-label={`Go to image ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
