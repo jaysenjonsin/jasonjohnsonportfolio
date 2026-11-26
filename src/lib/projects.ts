@@ -16,6 +16,30 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: 'EasternShipbuilding',
+    title: 'Eastern Shipbuilding Group',
+    description: 'building internal tools for shipbuilding @ Eastern Shipbuilding Group',
+    longDescription:
+      'Eastern Shipbuilding Group is a shipbuilder that designs and builds commercial and government vessels. As a Software Engineer at Eastern Shipbuilding, I build internal tools that support the company\'s engineering and production teams. I built the Cable Routing Tool as the sole developer, taking it from requirements with the electrical team to production in 2 months and replacing ad hoc cable management in SharePoint spreadsheets. I built the tool as a React/TypeScript single-page app on a Python/FastAPI backend with SQL Server, plus a C#/.NET plugin that lets designers route cables from inside AutoCAD. Designers can select cables and find the shortest route that respects tray fill limits and cable compatibility, and anyone on the team can look up a cable\'s route, status, and history in the browser. I built real-time multi-user workflows over WebSockets, with cable locking, live updates, and debounced refetching, so several designers can route at once without overwriting each other. I cut worst-case page loads under 20 concurrent users from 76 seconds to under 1 second with a SQL-trigger change counter and a shared, single-flight results cache. I also built a lazy-loaded three.js 3D view of every tray on the ship that renders 12,000+ instanced boxes in under a second. To keep quality high without a second engineer reviewing my code, I backed the system with over 2,000 automated tests across pytest, Vitest, React Testing Library, and Playwright, TypeScript API types generated from OpenAPI, and Microsoft Entra single sign-on with role-based access.',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Python',
+      'FastAPI',
+      'SQL Server',
+      'C#',
+      '.NET',
+      'AutoCAD',
+      'WebSockets',
+      'three.js',
+      'Playwright',
+      'pytest',
+    ],
+    year: '2026',
+    category: 'work',
+    onHomepage: true,
+  },
+  {
     id: 'Chartbeat',
     title: 'Chartbeat',
     description: 'building real-time analytics tools @ Chartbeat',
